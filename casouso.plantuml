@@ -1,0 +1,31 @@
+@startuml
+top to bottom direction
+
+actor Gerente
+actor UsuarioAutorizado
+actor Secretaria
+
+Gerente -down-> UsuarioAutorizado
+UsuarioAutorizado -down-> Secretaria
+
+(registrarVehiculo)
+(generarReporteVehicular)
+(consultarDisponibilidadVehicular)
+(consultarHistorialRutas)
+(confirmarLlegadaCarga)
+(asignarRuta)
+(monitorearRuta)
+(programarMantenimiento)
+
+Gerente --> (registrarVehiculo)
+Gerente --> (generarReporteVehicular)
+
+UsuarioAutorizado --> (consultarDisponibilidadVehicular)
+UsuarioAutorizado --> (consultarHistorialRutas)
+
+Secretaria --> (confirmarLlegadaCarga)
+Secretaria --> (asignarRuta)
+Secretaria --> (monitorearRuta)
+Secretaria --> (programarMantenimiento)
+
+@enduml

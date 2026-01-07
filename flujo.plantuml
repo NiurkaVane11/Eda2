@@ -1,0 +1,26 @@
+@startuml
+title Flujo de ensamblaje de un mueble - Supermaxi
+
+start
+
+:Tomar piezas del inventario;
+:Verificar que todas las piezas estén disponibles?;
+
+if (Todas las piezas disponibles?) then (sí)
+    :Ensamblar piezas principales;
+    :Ensamblar partes secundarias;
+    :Revisar calidad del ensamblaje;
+    if (Aprobado?) then (sí)
+        :Empaquetar mueble;
+        :Mueble listo para entrega;
+    else (no)
+        :Reparar/ajustar mueble;
+        :Revisar calidad nuevamente;
+    endif
+else (no)
+    :Reportar faltante de piezas;
+    :Esperar reposición de inventario;
+endif
+
+stop
+@enduml
